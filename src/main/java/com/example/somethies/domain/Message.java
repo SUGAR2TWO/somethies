@@ -15,7 +15,6 @@ public class Message {
     private String tag;
 
     public Message(){
-
     }
 
     public Message(String text, String tag) {
