@@ -1,4 +1,4 @@
-create sequence hibernate_sequence start 1 increment 1
+create sequence hibernate_sequence start 1;
 
 create table message (
     id int8 not null,
@@ -21,11 +21,3 @@ create table usr (
     username varchar(255) not null,
     primary key (id)
 );
-
-alter table if exists message
-    add constraint message_user_fk
-    foreign key (user_id) references usr
-
-alter table if exists user_role
-    add constraint user_role_fk
-    foreign key (user_id) references usr
